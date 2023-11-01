@@ -29,18 +29,18 @@
 Para utilizar el servicio de INEGI y poder guardarlo en la base de datos, debemos consumir el servicio y traerlo por un seeder como se muestra a continuación:
 
 Crear InegiSeeder:
-![Alt text](my-project/storage/app/public/images/InegiSeeder.png?raw=true "Consumir el servicio de INEGI")
+![Alt text](storage/app/public/images/InegiSeeder.png?raw=true "Consumir el servicio de INEGI")
 
 
 ### <a name="paso2">Crear Modelo</a>:
 
 A continuación  necesitamos crear un modelo para agregar lo que trajimos del servicio a la Base de datos.
 
-![Alt text](my-project/storage/app/public/images/inegiModel.png?raw=true "Crear modelo")
+![Alt text](storage/app/public/images/inegiModel.png?raw=true "Crear modelo")
 
 Verificamos la migración del servicio a la base de datos:
 
-![Alt text](my-project/storage/app/public/images/inegiMigration.png?raw=true "Migración")
+![Alt text](storage/app/public/images/inegiMigration.png?raw=true "Migración")
 
 
 ### <a name="paso3">Datatables</a>:
@@ -48,7 +48,7 @@ Modificamos welcome.blade.php para agregar datatables.
 Pero necesitaremos agregar un controlador para indexarlo, Aquí tambien agregaremos un boton que nos ayudara a visualizar los datos en un modal.
 
 Controlador:
-![Alt text](my-project/storage/app/public/images/inegiController.png?raw=true "Controlador con boton de acción")
+![Alt text](storage/app/public/images/inegiController.png?raw=true "Controlador con boton de acción")
 
 Se agrega la siguiente ruta a "routes/web.php"
 ```
@@ -56,7 +56,7 @@ Route::get('/inegi', [App\Http\Controllers\InegiController::class, 'index'])->na
 ```
 
 El resultado:
-![Alt text](my-project/storage/app/public/images/datatables.png?raw=true "Datatables")
+![Alt text](storage/app/public/images/datatables.png?raw=true "Datatables")
 
 
 ### <a name="paso4">Modal</a>:
@@ -65,7 +65,7 @@ Para desplegar la información la agregó dentro de un "data-value" en formato j
 
 Resultado:
 
-![Alt text](my-project/storage/app/public/images/modal.png?raw=true "Listar tarjetas del usuario")
+![Alt text](storage/app/public/images/modal.png?raw=true "Listar tarjetas del usuario")
 
 
 
